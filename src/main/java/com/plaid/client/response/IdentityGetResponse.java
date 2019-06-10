@@ -3,10 +3,10 @@ package com.plaid.client.response;
 import java.util.List;
 
 public final class IdentityGetResponse extends BaseResponse {
-  private ItemStatus item;
+  private Item item;
   private List<AccountWithOwners> accounts;
 
-  public ItemStatus getItem() {
+  public Item getItem() {
     return item;
   }
 

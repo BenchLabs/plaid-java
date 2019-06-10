@@ -3,10 +3,10 @@ package com.plaid.client.response;
 import java.util.List;
 
 public final class IncomeGetResponse extends BaseResponse {
-  private ItemStatus item;
+  private Item item;
   private Income income;
 
-  public ItemStatus getItem() {
+  public Item getItem() {
     return item;
   }
 

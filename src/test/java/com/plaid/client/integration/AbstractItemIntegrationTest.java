@@ -4,7 +4,7 @@ import com.plaid.client.request.SandboxPublicTokenCreateRequest;
 import com.plaid.client.request.ItemGetRequest;
 import com.plaid.client.request.ItemPublicTokenExchangeRequest;
 import com.plaid.client.request.common.Product;
-import com.plaid.client.response.ItemStatus;
+import com.plaid.client.response.Item;
 import com.plaid.client.response.Account;
 import com.plaid.client.response.ItemGetResponse;
 import com.plaid.client.response.ItemPublicTokenExchangeResponse;
@@ -25,7 +25,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public abstract class AbstractItemIntegrationTest extends AbstractIntegrationTest {
   private ItemPublicTokenExchangeResponse exchangeTokenResponse;
-  private ItemStatus item;
+  private Item item;
 
   protected static void assertAccount(Account actualAccount,
                                       String expectedType,
@@ -73,7 +73,7 @@ public abstract class AbstractItemIntegrationTest extends AbstractIntegrationTes
     return exchangeTokenResponse;
   }
 
-  public ItemStatus getItem() {
+  public Item getItem() {
     return item;
   }
 }

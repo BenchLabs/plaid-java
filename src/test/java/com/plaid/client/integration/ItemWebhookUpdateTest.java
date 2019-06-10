@@ -4,7 +4,7 @@ import com.plaid.client.request.ItemWebhookUpdateRequest;
 import com.plaid.client.request.common.Product;
 import com.plaid.client.response.ErrorResponse;
 import com.plaid.client.response.ItemWebhookUpdateResponse;
-import com.plaid.client.response.ItemStatus;
+import com.plaid.client.response.Item;
 import org.junit.Test;
 import retrofit2.Response;
 
@@ -31,8 +31,8 @@ public class ItemWebhookUpdateTest extends AbstractItemIntegrationTest {
     	new ItemWebhookUpdateRequest(getItemPublicTokenExchangeResponse().getAccessToken(), "https://baz.xyz/foo-test-hook")).execute();
 
     assertSuccessResponse(webhookResponse);
-    ItemStatus itemStatus = webhookResponse.body().getItem();
-    assertEquals(itemStatus.getWebhook(), "https://baz.xyz/foo-test-hook");
+    Item item = webhookResponse.body().getItem();
+    assertEquals(item.getWebhook(), "https://baz.xyz/foo-test-hook");
   }
 
   @Test

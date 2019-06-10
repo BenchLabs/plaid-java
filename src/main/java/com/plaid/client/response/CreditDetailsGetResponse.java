@@ -7,11 +7,11 @@ import java.util.List;
  * Response object for /credit_details/get endpoint.
  */
 public final class CreditDetailsGetResponse extends BaseResponse {
-  private ItemStatus item;
+  private Item item;
   private List<Account> accounts;
   private List<CreditDetail> creditDetails;
 
-  public ItemStatus getItem() {
+  public Item getItem() {
     return item;
   }
 
