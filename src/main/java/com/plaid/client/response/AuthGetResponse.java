@@ -3,11 +3,11 @@ package com.plaid.client.response;
 import java.util.List;
 
 public final class AuthGetResponse extends BaseResponse {
-  private Item item;
+  private ItemStatus item;
   private List<Account> accounts;
   private Numbers numbers;
 
-  public Item getItem() {
+  public ItemStatus getItem() {
     return item;
   }
 

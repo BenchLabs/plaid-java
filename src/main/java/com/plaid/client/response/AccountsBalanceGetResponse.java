@@ -6,10 +6,10 @@ import java.util.List;
  * Response for /accounts/balance/get api call.
  */
 public final class AccountsBalanceGetResponse extends BaseResponse {
-  private Item item;
+  private ItemStatus item;
   private List<Account> accounts;
 
-  public Item getItem() {
+  public ItemStatus getItem() {
     return item;
   }
 

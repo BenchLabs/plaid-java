@@ -6,12 +6,12 @@ import java.util.List;
  * Response object for /transactions/get endpoint.
  */
 public final class TransactionsGetResponse extends BaseResponse {
-  private Item item;
+  private ItemStatus item;
   private List<Account> accounts;
   private List<Transaction> transactions;
   private Integer totalTransactions;
 
-  public Item getItem() {
+  public ItemStatus getItem() {
     return item;
   }
 

@@ -4,7 +4,7 @@ import com.plaid.client.PlaidClient;
 import com.plaid.client.integration.util.PlaidSandboxApiService;
 import com.plaid.client.response.BaseResponse;
 import com.plaid.client.response.ErrorResponse;
-import com.plaid.client.response.Item;
+import com.plaid.client.response.ItemStatus;
 import okhttp3.logging.HttpLoggingInterceptor;
 import org.junit.Before;
 import retrofit2.Response;
@@ -75,7 +75,7 @@ public abstract class AbstractIntegrationTest {
     assertEquals(expectedErrorCode, errorResponse.getErrorCode());
   }
 
-  protected static void assertItemEquals(Item expectedItem, Item actualItem) {
+  protected static void assertItemEquals(ItemStatus expectedItem, ItemStatus actualItem) {
     assertEquals(expectedItem.getError(), actualItem.getError());
     assertEquals(expectedItem.getAvailableProducts(), actualItem.getAvailableProducts());
     assertEquals(expectedItem.getBilledProducts(), actualItem.getBilledProducts());
