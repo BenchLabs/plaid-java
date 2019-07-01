@@ -52,6 +52,8 @@
         <version>2.19.1</version>
 
         <configuration>
+          <!-- CircleCI build workaround -->
+          <useSystemClassLoader>false</useSystemClassLoader>
           <excludes>
             <exclude>**/integration/**/*.java</exclude>
           </excludes>
