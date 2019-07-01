@@ -6,4 +6,4 @@
 plaid-java.iml
 *.ipr
 *.iws
-
+.env
