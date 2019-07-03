@@ -1,3 +1,3 @@
-library 'bench-pipeline@PL-2540-publish-lib-mvn'
+library 'bench-pipeline'
 
 publishLibrary('clean verify install deploy', 'mvn')
